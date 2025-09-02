@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Chaotic Lattice – distorted grid with noise
+rows, cols = 20, 20
+fig, ax = plt.subplots(figsize=(6,6))
+
+for i in range(rows):
+    for j in range(cols):
+        dx, dy = np.random.uniform(-0.2, 0.2, 2)
+        rect = plt.Rectangle((i+dx, j+dy), 0.9, 0.9, color=np.random.rand(3,))
+        ax.add_patch(rect)
+
+ax.set_aspect("equal")
+ax.axis("off")
+plt.show()
