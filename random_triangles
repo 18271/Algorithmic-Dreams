@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Random Triangles – scattered random triangles across the canvas
+fig, ax = plt.subplots(figsize=(6,6))
+for _ in range(100):
+    x = np.random.rand(3)
+    y = np.random.rand(3)
+    ax.fill(x, y, color=np.random.rand(3,), alpha=0.8)
+
+ax.set_aspect("equal")
+ax.axis("off")
+plt.show()
