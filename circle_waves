@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Circle Waves – stacked wavy rings
+theta = np.linspace(0, 2*np.pi, 800)
+plt.figure(figsize=(6,6))
+for r in np.linspace(0.2, 2, 30):
+    x = (r + 0.2*np.sin(theta*8)) * np.cos(theta)
+    y = (r + 0.2*np.sin(theta*8)) * np.sin(theta)
+    plt.plot(x, y, lw=0.8, color=np.random.rand(3,))
+
+plt.axis("off")
+plt.show()
