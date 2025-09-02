@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Orbit Dance – points orbiting in layered circular paths
+theta = np.linspace(0, 2*np.pi, 400)
+plt.figure(figsize=(6,6))
+for r in np.linspace(0.1, 2, 30):
+    x = r*np.cos(theta + r*3)
+    y = r*np.sin(theta + r*3)
+    plt.plot(x, y, lw=0.8, color=plt.cm.inferno(r/2))
+
+plt.axis("off")
+plt.show()
