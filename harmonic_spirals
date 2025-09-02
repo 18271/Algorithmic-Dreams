@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Harmonic Spirals – spirals built from overlapping harmonics
+theta = np.linspace(0, 30*np.pi, 3000)
+r = np.sin(theta*0.2) + np.cos(theta*0.3)
+x = r * np.cos(theta)
+y = r * np.sin(theta)
+
+plt.figure(figsize=(6,6))
+plt.plot(x, y, lw=0.6, color="black")
+plt.axis("off")
+plt.show()
